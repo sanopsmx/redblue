@@ -1,0 +1,39 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: hello
+  namespace: '135005621049'
+  selfLink: /apis/serving.knative.dev/v1/namespaces/135005621049/services/hello
+  uid: d20345d4-3871-4b79-be40-5dd33e3c66c2
+  resourceVersion: AAXrEbI4gHQ
+  generation: 1
+  creationTimestamp: '2022-10-15T12:15:12.064213Z'
+  labels:
+    cloud.googleapis.com/location: us-central1
+  annotations:
+    run.googleapis.com/client-name: cloud-console
+    serving.knative.dev/creator: kiran@opsmx.io
+    serving.knative.dev/lastModifier: kiran@opsmx.io
+    client.knative.dev/user-image: us-docker.pkg.dev/cloudrun/container/hello
+    run.googleapis.com/ingress: all
+    run.googleapis.com/ingress-status: all
+spec:
+  template:
+    metadata:
+      name: hello-00001-dak
+      annotations:
+        run.googleapis.com/client-name: cloud-console
+        autoscaling.knative.dev/maxScale: '100'
+    spec:
+      containerConcurrency: 80
+      timeoutSeconds: 300
+      serviceAccountName: waze-serviceaccount@my-orbit-project-71824.iam.gserviceaccount.com
+      containers:
+      - image: us-docker.pkg.dev/cloudrun/container/hello
+        ports:
+        - name: http1
+          containerPort: 8080
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 512Mi
