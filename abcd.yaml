@@ -27,7 +27,7 @@ spec:
     spec:
       containerConcurrency: 80
       timeoutSeconds: 300
-      serviceAccountName: waze-serviceaccount@my-orbit-project-71824.iam.gserviceaccount.com
+      serviceAccountName: spinnaker-cloudrun-account@my-orbit-project-71824.iam.gserviceaccount.com
       containers:
       - image: us-docker.pkg.dev/cloudrun/container/hello
         ports:
