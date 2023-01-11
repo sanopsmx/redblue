@@ -12,8 +12,8 @@ metadata:
     cloud.googleapis.com/location: us-central1
   annotations:
     run.googleapis.com/client-name: cloud-console
-    serving.knative.dev/creator: kiran@opsmx.io
-    serving.knative.dev/lastModifier: kiran@opsmx.io
+    serving.knative.dev/creator: sanjeev@opsmx.io
+    serving.knative.dev/lastModifier: sanjeev@opsmx.io
     client.knative.dev/user-image: gcr.io/my-orbit-project-71824/test-image:tag1
     run.googleapis.com/ingress: all
     run.googleapis.com/ingress-status: all
