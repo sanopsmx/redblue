@@ -38,6 +38,3 @@ spec:
             cpu: 1000m
             memory: 512Mi
 
-
-
-
